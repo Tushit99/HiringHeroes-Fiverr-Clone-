@@ -51,10 +51,18 @@ select{
     font-weight: bold;
     width: 150px;
     height: 40px;
+    border: 1px solid grey;
+    outline: none;
 }
 #sort{
 
     margin:50px 0 0 40px
+}
+option{
+    border: 2px solid black;
+    font-size: 16px;
+    padding: 20px;
+    font-weight: bold;
 }
 
 
@@ -80,6 +88,7 @@ select{
 }
 #container>div{
     border: 1px solid grey;
+    
 }
 #container>div:hover>p{
     
@@ -121,4 +130,22 @@ select{
     font-size: 15px;
     background-color: #ffffff;
     border: 1px solid grey;
+}
+#container>div>.cart_btn{
+    display: block;
+    margin: auto;
+    width: 35%;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #1dbf73;
+    color: #ffffff;
+    font-size: 15px;
+    border: none;
+    margin-bottom: 10px;
+
+}
+#container>div>.cart_btn:hover{
+    background-color: #ffffff;
+    color: #1dbf73;
+    border: 1px solid #1dbf73;
 }
