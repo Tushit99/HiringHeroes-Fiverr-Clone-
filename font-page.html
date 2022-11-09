@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts & Typography</title>
+</head>
+<style>
+    
+    #heading{
+        font-weight: bolder;
+        font-family: Macan, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 30px;
+        margin-bottom: -10px;
+    }
+    div>#heading+p{
+        font-size: 15px;
+        font-family: Macan, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+        color: grey;
+
+    }
+    div>#heading+p img{
+        width: 1%;
+    }
+    div>#heading+p>a{
+        color: #0095f6;
+        text-decoration: none;
+    }
+    #category{
+        display: flex;
+        width: 50%;
+        height: 150px;
+        gap: 20px;
+    }
+    #category img{
+        width: 28%;
+
+    }
+    #category>div{
+        display: flex;
+        font-family: Macan, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    #category>div:hover{
+     color:#1dbf73;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    *{
+        margin-left: 10px;
+    }
+    select{
+        font-weight: bold;
+        width: 150px;
+        height: 40px;
+    }
+    #sort{
+
+        margin:50px 0 0 40px
+    }
+
+
+
+</style>
+<body>
+    <div>
+        <div><p id="heading" >Fonts & Typography</p>
+        <p>Create new fonts, typography, hand lettering & calligraphy designs. <a href=""><img src="https://cdn4.iconfinder.com/data/icons/circle-blue/64/play.png" alt=""> How Hiring Heroes Works</a></p></div>
+        <div id="category" >
+            <div><img src="https://fiverr-res.cloudinary.com/image/upload/v1584948052/general_assets/categories/nsc_01/2535.svg" alt=""><p>Typography</p></div>
+            <div><img src="https://fiverr-res.cloudinary.com/image/upload/v1584948052/general_assets/categories/nsc_01/2537.svg" alt=""><p>Caligraphy</p></div>
+            <div><img src="https://fiverr-res.cloudinary.com/image/upload/v1584948052/general_assets/categories/nsc_01/2534.svg" alt=""><p>Font Design</p></div>
+            <div><img src="https://fiverr-res.cloudinary.com/image/upload/v1584948052/general_assets/categories/nsc_01/2536.svg" alt=""><p>Hand Lettering</p></div>
+        </div>
+    </div>
+
+    <div id="sort">
+        <select name="" id="">
+            <option value="">Sort by Price</option>
+            <option value="l-t-h">Low to High</option>
+            <option value="h-t-l">High to Low</option>
+        </select>
+        <select name="" id="">
+            <option value="">Budget</option>
+            <option value="less">Less than 1000</option>
+            <option value="high">More than 1000</option>
+        </select>
+    </div>
+
+    <div id="container">
+
+    </div>
+    <div id="p_btn"></div>
+
+
+    
+</body>
+<script src="font-page.js"></script>
+</html>
