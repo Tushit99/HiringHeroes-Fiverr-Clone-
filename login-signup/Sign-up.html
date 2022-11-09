@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Sign-up.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="innerbox" id="card">
+                <!-- Log-in -->
+                <div class="cardFront">
+                    <h2>Login</h2>
+                    <form  action="">
+                        <input type="email" class="inputBox" placeholder="Your Email Id" required>
+                        <input type="password" class="inputBox" placeholder="Your Password" required>
+                        <button type="submit" class = 'submitBtn'>Submit</button>
+                        <input type="checkbox"><span>Remember Me</span>
+                    </form>
+                    <button type="button" class="btn" onclick="openRegister()">Sign-Up</button>
+                    <a id="forget" href="">Forget Password</a>
+                </div>
+
+                <!-- sign-up -->
+                <div class="cardBack">
+                    <h2>Join Now</h2>
+                    <form id="form" action="">
+
+                        <input type="text" id="name" class="inputBox" placeholder="Your Name" required>
+                        <input type="email" id="email" class="inputBox" placeholder="Your Email Id" required>
+                        <input type="password" id="password" class="inputBox" placeholder="Your Password" required>
+                        <input type="submit" id="submit_btn" class = 'submitBtn'></input>
+                        <!-- <input type="checkbox"><span>Remember Me</span> -->
+                        <div class="line"></div>
+                    </form>
+                     
+
+                    <div id="log_in_with_facebook">
+                        <a href="#" class="field facebook">
+                            <i class='bx bxl-facebook facebook-icon'></i>
+                            <span>Login with Facebook</span>
+                        </a>
+                    </div>
+    
+                    <div id="log_in_with_google">
+                        <a href="#" class="field google">
+                            <i class='bx bxl-google google-icon'></i>
+                            <span>Login with Google</span>
+                        </a>
+                    </div>
+                    
+                    <button type="button" id="btn" class="btn" onclick="openLogin()">I've an account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="Sign-up.js"></script>
