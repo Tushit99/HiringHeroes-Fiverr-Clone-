@@ -250,3 +250,22 @@ a.facebook .facebook-icon{
 }
 
 
+#adv{
+    width: 40%;
+    height: 90vh;
+    /* border: 2px solid red; */
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,auto);
+    gap: 20px;
+    text-align: center;
+
+}
+
+.adv{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+.adv-img{
+    width: 90%;
+}
