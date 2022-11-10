@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+    src="https://kit.fontawesome.com/24c494a6b6.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            height: 1000px;
+        }
+        #nav1{
+            display: flex;
+            border: 0px solid blue;
+            padding: 15px 0px;
+            position: sticky;
+            top: 0px;
+            background-color: white;
+        }
+        #logo{
+            border: 0px solid red;
+            width: 10%;
+            display: flex;
+            align-items: center;
+        }
+        #logo>img{
+            width: 100%;
+        }
+        #input{
+            border: 0px solid yellowgreen;
+            width: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            
+        }
+        #input>input{
+            width: 87%;
+            height: 65%;
+            border-radius: 5px 0px 0px 5px;
+            border: 1px solid #ccc;
+        }
+        #input>button{
+            width: 5%;
+            height: 73%;
+            border-radius: 0px 5px 5px 0px;
+            color: white;
+            background-color: black;
+            font-size: 18px;
+            
+            cursor: pointer;
+        }
+        #icons{
+            display: flex;
+            border: 0px solid red;
+            width: 18%;
+            justify-content: space-around;
+            /* font-size: 18px; */
+            height: 90%;
+            align-items: center;
+            
+        }
+        #icons>p{
+            border: 0px solid blue;
+            /* width: 15%; */
+            font-size: 20px;
+            /* margin-top: 0px; */
+            /* margin-bottom: 0px; */
+        }
+        .f{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .f2{
+            color: white;
+            background-color: blue;
+            border-radius: 50%;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 15%;
+            height: 40px;
+            text-align: center;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        #nav2{
+            display: flex;
+            justify-content: space-around;
+            position: sticky;
+            top: 93px;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            background-color: white;
+        }
+        #nav2>div{
+            
+            /* margin: 12px; */
+            padding: 12px 0px;
+        }
+        #nav2>div>a{
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+            color: black;
+        }
+        .drop_down:hover{
+            border-bottom: 4px solid rgb(110, 190, 110);
+            
+        }
+        .drop_down2:hover{
+            border-bottom: 4px solid rgb(110, 190, 110);
+            
+        }
+        /* .drop_down2>a:hover{
+            border-bottom: 3px solid rgb(110, 190, 110);
+            
+        } */
+        .drop_down_menu{
+            display: none;
+            position: absolute;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            width: 75%;
+            font-family: Arial, Helvetica, sans-serif;
+            top: 50px;
+            background-color: white;
+            
+        }
+        .drop_down_menu2{
+            display: none;
+            position: absolute;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            width: 50%;
+            font-family: Arial, Helvetica, sans-serif;
+            top: 50px;
+            background-color: white;
+            
+        }
+        .drop_down:hover .drop_down_menu{
+            border: 0px solid red;
+            display: block;
+        }
+        .drop_down2:hover .drop_down_menu2{
+            border: 0px solid red;
+            display: block;
+        }
+        .drop_down>a{
+            border: 0px solid blue;
+        }
+        /* .drop_down>a:hover+.drop_down_menu{
+            display: block;
+            
+        }
+        .drop_down>a:hover+.drop_down_menu2{
+            display: block;
+            
+        } */
+        .drop_down_item_1{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border: 0px solid red;
+            /* justify-content: space-around; */
+            margin-left: 10px;
+            
+        }
+        .drop_down_item_1 a{
+           display: block;
+           margin-bottom: 7px;
+           text-decoration: none;
+           color: black;
+        }
+        .drop_down_item_2{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            border: 0px solid red;
+            /* justify-content: space-around; */
+            margin-left: 10px;
+            
+        }
+        .drop_down_item_2 a{
+           display: block;
+           margin-bottom: 7px;
+           text-decoration: none;
+           color: black;
+           font-size: 18px;
+           margin: 10px;
+        }
+        #mid-4{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #mid-4>div{
+            border: 1px solid #ccc;
+            
+        }
+        #mid-4>div:hover{
+            border: 2px solid #cccccc;
+        }
+        #mid-4>div>img{
+            width: 100%;
+        }
+        #mid-4>div>div{
+            display: flex;
+            border: 0px solid green;
+            margin-left: 7px;
+        }
+        #mid-4>div>div>div{
+            border: 0px solid yellowgreen;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            justify-content: center;
+            padding: 0px;
+        }
+        #mid-4>div>div>div>img{
+            width: 25%;
+            height: 50%;
+           
+        }
+        .first{
+            border-radius: 50%;
+        }
+        #mid-4>div>div>div>div>span{
+            border: 0px solid saddlebrown;
+            display: block;
+            margin-top: 10px;
+            
+            
+        }
+        #mid-4>div>div>div>div>p{
+            margin-top: -1px;
+            color: gold;
+        }
+        #mid-4>div>img~p{
+            font-weight: 550;
+            margin-left: 7px;
+        }
+        p+h4{
+            color: gold;
+            margin-left: 7px;
+        }
+        p+h4>span{
+            color: #ccc;
+        }
+        hr{
+            margin-top: -10px;
+        }
+        #last{
+            border:0px solid red;
+            display: flex;
+            justify-content: space-between;
+            margin-right: 7px;
+            margin-top: -10px;
+        }
+        #last>p+p{
+            border: 0px solid blue;
+            width: 35%;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: end;
+        }
+        #last>p+p>span{
+            font-size: 16px;
+        }
+        #last>p:nth-child(1){
+            color: #ccc;
+        }
+        #mid-2>div>button>i{
+            display: inline-block;
+        }
+        br+h1{
+            margin-left: 2%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        span{
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="nav1">
+        <div id="logo"><img src="hero.png" alt=""></div>
+        <div id="input">
+            <input type="text" placeholder="What service are you looking for today?">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div id="icons">
+            <p><i class="fa-regular fa-bell"></i></p>
+            <p><i class="fa-sharp fa-solid fa-envelope"></i></p>
+            <p><i class="fa-regular fa-heart"></i></p>
+            <p class="f">heart</p>
+            <div class="f2"><p>R</p></div>
+            
+        </div>
+    </div>
+    <div id="nav2">
+       
+        <div class="drop_down">
+            <a href="">Graphics & Design</a>
+            <div class="drop_down_menu">
+                <div class="drop_down_item_1">
+                    <div>
+                        <h3>Logo & Brand Identity</h3>
+                        <a href="">Logo Design</a>
+                        <a href="">Brand Styles Guides</a>
+                        <a href="">Fonts & Typography</a>
+                        <a href="">Business Cards & Stationery</a>
+                        <h3>Gaming</h3>
+                        <a href="">Game Art</a>
+                        <a href="">Graphics for Streamers</a>
+                        <a href="">Twitch Store</a>
+                        <h3>Art & Illustration</h3>
+                        <a href="">Illustration</a>
+                        <a href="">NFT Art</a>
+                        <a href="">Pattern Design</a>
+                        <a href="">Portraits & Caricatures</a>
+                        <a href="">Cartoons & Comics</a>
+                    </div>
+                    <div>
+                        <h3>Logo & Brand Identity</h3>
+                        <a href="">Logo Design</a>
+                        <a href="">Brand Styles Guides</a>
+                        <a href="">Fonts & Typography</a>
+                        <a href="">Business Cards & Stationery</a>
+                        <h3>Gaming</h3>
+                        <a href="">Game Art</a>
+                        <a href="">Graphics for Streamers</a>
+                        <a href="">Twitch Store</a>
+                        <h3>Art & Illustration</h3>
+                        <a href="">Illustration</a>
+                        <a href="">NFT Art</a>
+                        <a href="">Pattern Design</a>
+                        <a href="">Portraits & Caricatures</a>
+                        <a href="">Cartoons & Comics</a>
+                    </div>
+                    <div>
+                        <h3>Logo & Brand Identity</h3>
+                        <a href="">Logo Design</a>
+                        <a href="">Brand Styles Guides</a>
+                        <a href="">Fonts & Typography</a>
+                        <a href="">Business Cards & Stationery</a>
+                        <h3>Gaming</h3>
+                        <a href="">Game Art</a>
+                        <a href="">Graphics for Streamers</a>
+                        <a href="">Twitch Store</a>
+                        <h3>Art & Illustration</h3>
+                        <a href="">Illustration</a>
+                        <a href="">NFT Art</a>
+                        <a href="">Pattern Design</a>
+                        <a href="">Portraits & Caricatures</a>
+                        <a href="">Cartoons & Comics</a>
+                    </div>
+                    <div>
+                        <h3>Logo & Brand Identity</h3>
+                        <a href="">Logo Design</a>
+                        <a href="">Brand Styles Guides</a>
+                        <a href="">Fonts & Typography</a>
+                        <a href="">Business Cards & Stationery</a>
+                        <h3>Gaming</h3>
+                        <a href="">Game Art</a>
+                        <a href="">Graphics for Streamers</a>
+                        <a href="">Twitch Store</a>
+                        <h3>Art & Illustration</h3>
+                        <a href="">Illustration</a>
+                        <a href="">NFT Art</a>
+                        <a href="">Pattern Design</a>
+                        <a href="">Portraits & Caricatures</a>
+                        <a href="">Cartoons & Comics</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <div class="drop_down2">
+            <a href="">Digital Marketing</a>
+            <div class="drop_down_menu2">
+                <div class="drop_down_item_2">
+                    <div>
+                        <a href="">Social Media Marketing</a>
+                        <a href="">Social Media Advertising</a>
+                        <a href="">Search Engine Optimization (SEO)</a>
+                        <a href="">Local SEO</a>
+                        <a href="">Marketing Strategy</a>
+                        <a href="">Public Relations</a>
+                        <a href="">Guest Posting</a>
+                        <a href="">Video Marketing</a>
+                        <a href="">Email Marketing</a>
+                        <a href="">Web Analytics</a>
+                        <a href="">Text Message Marketing</a>
+                        <a href="">Crowdfunding</a>
+                    </div>
+                    <div>
+                        <a href="">Marketing Advice</a>
+                        <a href="">Search Engine Marketing (SEM)</a>
+                        <a href="">Display Advertising</a>
+                        <a href="">E-Commerce Marketing</a>
+                        <a href="">Influencer Marketing</a>
+                        <a href="">Community Management</a>
+                        <a href="">Mobile App Marketing</a>
+                        <a href="">Music Promotion</a>
+                        <a href="">Book & eBook Marketing</a>
+                        <a href="">Podcast Marketing</a>
+                        <a href="">Affiliate Marketing</a>
+                        <a href="">Other</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="drop_down">
+            <a href="">Writing & Translation</a>
+            <div class="drop_down_menu">
+                <div class="drop_down_item_1">
+                    <div>
+                        <h3>Logo & Brand Identity</h3>
+                        <a href="">Logo Design</a>
+                        <a href="">Brand Styles Guides</a>
+                        <a href="">Fonts & Typography</a>
+                        <a href="">Business Cards & Stationery</a>
+                        <h3>Gaming</h3>
+                        <a href="">Game Art</a>
+                        <a href="">Graphics for Streamers</a>
+                        <a href="">Twitch Store</a>
+                        <h3>Art & Illustration</h3>
+                        <a href="">Illustration</a>
+                        <a href="">NFT Art</a>
+                        <a href="">Pattern Design</a>
+                        <a href="">Portraits & Caricatures</a>
+                        <a href="">Cartoons & Comics</a>
+                    </div>
+                    <div>
+                        <h3>Logo & Brand Identity</h3>
+                        <a href="">Logo Design</a>
+                        <a href="">Brand Styles Guides</a>
+                        <a href="">Fonts & Typography</a>
+                        <a href="">Business Cards & Stationery</a>
+                        <h3>Gaming</h3>
+                        <a href="">Game Art</a>
+                        <a href="">Graphics for Streamers</a>
+                        <a href="">Twitch Store</a>
+                        <h3>Art & Illustration</h3>
+                        <a href="">Illustration</a>
+                        <a href="">NFT Art</a>
+                        <a href="">Pattern Design</a>
+                        <a href="">Portraits & Caricatures</a>
+                        <a href="">Cartoons & Comics</a>
+                    </div>
+                    <div>
+                        <h3>Logo & Brand Identity</h3>
+                        <a href="">Logo Design</a>
+                        <a href="">Brand Styles Guides</a>
+                        <a href="">Fonts & Typography</a>
+                        <a href="">Business Cards & Stationery</a>
+                        <h3>Gaming</h3>
+                        <a href="">Game Art</a>
+                        <a href="">Graphics for Streamers</a>
+                        <a href="">Twitch Store</a>
+                        <h3>Art & Illustration</h3>
+                        <a href="">Illustration</a>
+                        <a href="">NFT Art</a>
+                        <a href="">Pattern Design</a>
+                        <a href="">Portraits & Caricatures</a>
+                        <a href="">Cartoons & Comics</a>
+                    </div>
+                    <div>
+                        <h3>Logo & Brand Identity</h3>
+                        <a href="">Logo Design</a>
+                        <a href="">Brand Styles Guides</a>
+                        <a href="">Fonts & Typography</a>
+                        <a href="">Business Cards & Stationery</a>
+                        <h3>Gaming</h3>
+                        <a href="">Game Art</a>
+                        <a href="">Graphics for Streamers</a>
+                        <a href="">Twitch Store</a>
+                        <h3>Art & Illustration</h3>
+                        <a href="">Illustration</a>
+                        <a href="">NFT Art</a>
+                        <a href="">Pattern Design</a>
+                        <a href="">Portraits & Caricatures</a>
+                        <a href="">Cartoons & Comics</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <div class="drop_down2">
+            <a href="">Video & Animation</a>
+            <div class="drop_down_menu2">
+                <div class="drop_down_item_2">
+                    <div>
+                        <a href="">Social Media Marketing</a>
+                        <a href="">Social Media Advertising</a>
+                        <a href="">Search Engine Optimization (SEO)</a>
+                        <a href="">Local SEO</a>
+                        <a href="">Marketing Strategy</a>
+                        <a href="">Public Relations</a>
+                        <a href="">Guest Posting</a>
+                        <a href="">Video Marketing</a>
+                        <a href="">Email Marketing</a>
+                        <a href="">Web Analytics</a>
+                        <a href="">Text Message Marketing</a>
+                        <a href="">Crowdfunding</a>
+                    </div>
+                    <div>
+                        <a href="">Marketing Advice</a>
+                        <a href="">Search Engine Marketing (SEM)</a>
+                        <a href="">Display Advertising</a>
+                        <a href="">E-Commerce Marketing</a>
+                        <a href="">Influencer Marketing</a>
+                        <a href="">Community Management</a>
+                        <a href="">Mobile App Marketing</a>
+                        <a href="">Music Promotion</a>
+                        <a href="">Book & eBook Marketing</a>
+                        <a href="">Podcast Marketing</a>
+                        <a href="">Affiliate Marketing</a>
+                        <a href="">Other</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <div class="drop_down"><a href="">Music & Audio</a></div>
+       <div class="drop_down"><a href="">Programming & Tech</a></div>
+       <div class="drop_down"><a href="">Business</a></div>
+       <div><a href="">Lifestyle</a></div>
+       <div><a href="">Trending</a></div>
+       
+    </div>
+    <br>
+    <h1>Most Popular Gigs in <span>Logo Design</span></h1>
+    <div id="mid-4">
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/1094285/original/30f75e896954dc0ea9e28a87209a28053bcccc18.png" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/125201427/original/b120e58737b8b7330824cbe82c594796dadefc9e.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/155052792/original/27df256e3553f1ae05f7bdfb7fd16c23fcd11815.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/142024147/original/ed9eab9c2e2462aacc09f9bf6eda51f6fcbb47b4.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/137846948/original/dfcb86f1ea3b696bd3594afa8f64eeb2b65b6de3.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/123037094/original/b0f38793d3a3371bbca65185a56230de52bd4376.png" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/164584703/original/6eb83c1d3f31b6e3a99910ed1a18306acab7d2db.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/147389074/original/3003f1cad788e480412ff64888c9685e733a8c2a.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/115533372/original/67ec94a37b1b51862162ffd326912ebd1616e725.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/132488260/original/955d6d66789bd57075f25da7de2b3a4233b2e26a.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/video/upload/so_0.692822,t_gig_cards_web/acqh2sxrod8hhty9o54i.png" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/110847760/original/00bbe27e2dc6b3b34bd1a6c02b9b5867e1aff783.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/1094285/original/30f75e896954dc0ea9e28a87209a28053bcccc18.png" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/125201427/original/b120e58737b8b7330824cbe82c594796dadefc9e.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/155052792/original/27df256e3553f1ae05f7bdfb7fd16c23fcd11815.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/142024147/original/ed9eab9c2e2462aacc09f9bf6eda51f6fcbb47b4.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/137846948/original/dfcb86f1ea3b696bd3594afa8f64eeb2b65b6de3.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/123037094/original/b0f38793d3a3371bbca65185a56230de52bd4376.png" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/164584703/original/6eb83c1d3f31b6e3a99910ed1a18306acab7d2db.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/147389074/original/3003f1cad788e480412ff64888c9685e733a8c2a.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/115533372/original/67ec94a37b1b51862162ffd326912ebd1616e725.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/132488260/original/955d6d66789bd57075f25da7de2b3a4233b2e26a.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/video/upload/so_0.692822,t_gig_cards_web/acqh2sxrod8hhty9o54i.png" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/110847760/original/00bbe27e2dc6b3b34bd1a6c02b9b5867e1aff783.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/1094285/original/30f75e896954dc0ea9e28a87209a28053bcccc18.png" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/125201427/original/b120e58737b8b7330824cbe82c594796dadefc9e.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/155052792/original/27df256e3553f1ae05f7bdfb7fd16c23fcd11815.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/142024147/original/ed9eab9c2e2462aacc09f9bf6eda51f6fcbb47b4.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/137846948/original/dfcb86f1ea3b696bd3594afa8f64eeb2b65b6de3.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/123037094/original/b0f38793d3a3371bbca65185a56230de52bd4376.png" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/164584703/original/6eb83c1d3f31b6e3a99910ed1a18306acab7d2db.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/147389074/original/3003f1cad788e480412ff64888c9685e733a8c2a.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/115533372/original/67ec94a37b1b51862162ffd326912ebd1616e725.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/132488260/original/955d6d66789bd57075f25da7de2b3a4233b2e26a.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/video/upload/so_0.692822,t_gig_cards_web/acqh2sxrod8hhty9o54i.png" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/110847760/original/00bbe27e2dc6b3b34bd1a6c02b9b5867e1aff783.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/1094285/original/30f75e896954dc0ea9e28a87209a28053bcccc18.png" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/125201427/original/b120e58737b8b7330824cbe82c594796dadefc9e.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/155052792/original/27df256e3553f1ae05f7bdfb7fd16c23fcd11815.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/142024147/original/ed9eab9c2e2462aacc09f9bf6eda51f6fcbb47b4.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/137846948/original/dfcb86f1ea3b696bd3594afa8f64eeb2b65b6de3.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/123037094/original/b0f38793d3a3371bbca65185a56230de52bd4376.png" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/164584703/original/6eb83c1d3f31b6e3a99910ed1a18306acab7d2db.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/147389074/original/3003f1cad788e480412ff64888c9685e733a8c2a.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/115533372/original/67ec94a37b1b51862162ffd326912ebd1616e725.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/132488260/original/955d6d66789bd57075f25da7de2b3a4233b2e26a.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/video/upload/so_0.692822,t_gig_cards_web/acqh2sxrod8hhty9o54i.png" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/110847760/original/00bbe27e2dc6b3b34bd1a6c02b9b5867e1aff783.jpg" alt="">
+            <div>
+                <div>
+                    <img src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f83a229e8191a3f1ec17fa32e4f4b18b-1620271450788/14588d56-a1e9-4016-b93f-e91950fc035c.JPG" alt="" class="first">
+                    <div><span>studiowest</span><p>Lever 2 Seller</p></div>
+                </div>
+                <div>
+                    <p>Cllents &nbsp;</p>
+                    <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_clients_thumb/v1/attachments/company/logo/4066e462e9cf658830634a2ee7993242-1643199849/61a87d8c84d88e25cd784acd.png" alt="">
+                    <p>&nbsp; aaa</p>
+                </div>
+            </div>
+            <p>I will do minimalist modern and business logo design</p>
+            <h4>4.9<span>(1k+)</span></h4>
+            <hr>
+            <div id="last">
+                <p><i class="fa-solid fa-heart"></i></p>
+                <p>STARTING AT <span>Rs.2571</span></p>
+            </div>
+        </div>
+        
+        
+    </div>
+</body>
+</html>
+<script type="module" src="afterlogin.js"></script>

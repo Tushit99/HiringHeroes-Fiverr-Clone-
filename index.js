@@ -1,9 +1,14 @@
 import { navbar,navbar2 } from './components/navbar.js';
+import { footer,footer2 } from './components/footer.js'
 
 let nav1 = document.getElementById("header1");
 nav1.innerHTML = navbar();
 let nav2 = document.getElementById("nav");
 nav2.innerHTML = navbar2();
+let foot = document.querySelector("#footer");
+foot.innerHTML = footer();
+let foot2 = document.querySelector("#last");
+foot2.innerHTML = footer2();
 
 
 
@@ -21,12 +26,14 @@ window.addEventListener("scroll", function(){
        //
        //document.querySelector("#nav").style.position="relative"
        document.querySelector("#nav").style.position="sticky"
-       document.querySelector("#nav").style.top = "93px"
+       document.querySelector("#nav").style.top = "89px"
         document.querySelector("#header1").style.backgroundColor="white";
         document.querySelector(".input").style.visibility="visible";
     }
     
 });
+
+
 
 
 //let carousel_div = document.querySelector("#carousel");
@@ -53,3 +60,4 @@ window.addEventListener("scroll", function(){
 //     },5000)
 // }
 // carousel()
+
