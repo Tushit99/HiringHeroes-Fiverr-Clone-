@@ -1,0 +1,194 @@
+
+body{
+    margin: 0; 
+    padding: 0; 
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+#main{
+  display: flex;  
+  width: 90%; 
+  text-align: center; 
+  margin: auto;  
+}  
+
+#main>div:nth-child(1){
+  flex: 7; 
+  margin: auto; 
+  text-align: left;
+}
+
+#main>div:nth-child(2){
+  flex: 3; 
+  margin: auto;
+}
+
+#data{
+    width: 90%;  
+    margin: 20px auto;  
+    display: grid ;  
+    gap: 18px; 
+    grid-template-columns: repeat(3,1fr); 
+} 
+
+#data>div img{
+    width: 100%; 
+}
+
+#data>div{
+    padding: 10px; 
+    border-radius: 10px;   
+    text-align: center; 
+    box-shadow: rgba(75, 67, 67, 0.2) 0px 7px 29px 0px; 
+} 
+
+#mylist>p{
+  color: rgb(152, 152, 152);
+}
+
+#data>div p,h3{
+    text-align: left; 
+}
+
+#data>div:hover{  
+    box-shadow: rgba(25, 0, 255, 0.244) 0px 7px 29px 0px; 
+} 
+
+.advertise{
+  display: flex;  
+  width: 90%; 
+  margin: auto;  
+} 
+
+.advertise img{
+  width: 100%;
+}
+
+/* CSS */
+.button-37 {
+  background-color: #00c954;
+  border: 1px solid #13aa52;
+  border-radius: 4px; 
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+  padding: 10px 25px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-37:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .button-37 {
+    padding: 10px 30px;
+  }
+}
+
+
+
+/* ============= */  
+
+#total{
+    display: flex; 
+    justify-content: space-between; 
+    position: fixed; 
+    bottom: 0;  
+    right: 0;  
+    padding: 14px 0;
+    left: 0;
+    align-items: center;
+    background-color: white; 
+}
+ 
+#total>*{
+    margin: 0 80px;  
+}
+
+/* =========== */  
+/* CSS */
+.button-28 {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-weight: bold;
+  font-size: large;
+  line-height: normal;
+  margin: 0;
+  min-width: 0;
+  outline: none;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none; 
+  width: 200px;
+  -webkit-user-select: none;
+  touch-action: manipulation;  
+  will-change: transform;
+}
+
+.button-28:disabled {
+  pointer-events: none;
+}
+
+.button-28:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-28:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+/* ====================== */
+/* ---------------------- */
+/* CSS */
+.button-33 {
+  background-color: rgb(0, 198, 0);
+  border-radius: 4px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px; 
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-33:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+
