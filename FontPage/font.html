@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore</title>
+    <script 
+    src="https://kit.fontawesome.com/24c494a6b6.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px; 
+            width: 100%;  
+            font-size: medium;
+        }
+        
+        .input{
+            visibility: hidden;
+        }
+
+        .dropDownCnt{
+            display: none;
+            position: absolute;
+            /*top: 100%;*/
+        }
+        .dropDown:hover .dropDownCnt{
+            display: block;
+        }
+        .dropDown{
+            border: 0px solid red;
+            
+        }
+        .hover1{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            width: 85%;
+            gap: 50px;
+            background-color: #cccccc;
+            justify-content: space-evenly;
+            padding: 10px 15px;
+            
+        }
+        .hover1>div>a{
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        .hover2{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            width: 50%;
+            gap: 70px;
+            background-color: #cccccc;
+            justify-content: space-around;
+            padding: 10px 15px;
+        }
+        .hover2>div>a{
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        #mid-1{
+            display: grid;
+            grid-template-columns: repeat(7, 1fr); 
+            grid-template-rows: repeat(1,auto) ;
+            /* border: 2px solid red; */
+            gap: 4%; 
+            width: 90%; 
+            margin: auto;  
+        }
+        #mid-1 img{
+            width: 100%; 
+            /* border: 2px solid black; */
+        }
+        #mid-1>div{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 3px; 
+            text-align: center;  
+            /* border: 2px solid rgb(0, 13, 255); */
+            overflow: hidden;
+        }
+        #mid-1 p{
+            margin: 0px; 
+            font-size: small;
+        }
+        
+        #mid-2{
+            display: flex; 
+            justify-content: flex-end;
+            align-items: center;
+            border: 2px solid red;
+            width: 96%; 
+            margin: auto; 
+            /* border: 2px solid black; */
+        }
+        #mid-2>div{
+            display: flex;
+            justify-content: space-between;
+            border: 0px solid blue; 
+        } 
+
+        #mid-1>div:hover{
+            padding: 2px ;
+            box-shadow: rgba(0, 8, 255, 0.24) 0px 3px 8px;
+        }
+
+        #mid-2>div>select{
+            background-color: white;
+            padding: 6px 10px; 
+            margin: auto 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-weight: bold;
+        }
+        #mid-2>div>form{
+            border: 0px solid yellowgreen;
+            display: flex;
+            width: 80%;
+            justify-content: space-between;
+            margin-left: 20%;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            align-items: center;
+        }
+        #mid-3{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            justify-content: space-between;
+            /* border: 2px solid rgb(255, 230, 0); */
+            margin: 20px; 
+            text-align: center;
+        }
+        #mid-3>h4{
+            border: 0px ;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #mid-3>div{
+            display: flex;
+            align-items: center;
+            border: 0px solid blue;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* mid-4 */
+
+        #mid-4{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            width: 94%; 
+            margin: 30px auto; 
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #mid-4>div{
+            border: 1px solid #ccc;   
+            border-radius: 4px;    
+            padding: 6px; 
+        }
+
+        #mid-4 img{
+            width: 100%;
+        }
+
+        #mid-4 p{
+            text-align: center; 
+        } 
+
+        #mid-4 button{
+            width: 100%; 
+            border: 0; 
+            background-color: rgb(255, 94, 120); 
+            padding: 6px ;  
+            font-size: medium; 
+            color: white;  
+            cursor: pointer; 
+            border-radius: 2px;
+        }
+        
+        /* div1 */ 
+        #div1{
+            width: 90%; 
+            margin: auto;  
+        }
+
+        .first{
+            border-radius: 50%;
+        }
+        
+        p+h4{
+            color: gold;
+            margin-left: 7px;
+        }
+        p+h4>span{
+            color: #ccc;
+        }
+        hr{
+            margin-top: -10px;
+        }
+        #last{
+            border:0px solid red;
+            display: flex;
+            justify-content: space-between;
+            margin-right: 7px;
+            margin-top: -10px;
+        }
+        #last>p+p{
+            border: 0px solid blue;
+            width: 35%;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: end;
+        }
+        #last>p+p>span{
+            font-size: 16px;
+        }
+        #last>p:nth-child(1){
+            color: #ccc;
+        }
+        #mid-2>div>button>i{
+            display: inline-block;
+        }
+        #mid-5{
+            display: grid;
+            width: 40%;
+            grid-template-columns: repeat(11, 1fr);
+            border: 0px solid red;
+            margin: auto;
+            justify-content: space-around;
+            gap: 5px;
+        }
+        #mid-5>div{
+            padding: 10px;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #mid-5+hr{
+            width: 95%;
+            margin: auto;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        #footer{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            height: auto;
+            border: 0px solid red;
+            padding: 25px;
+            
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #footer>div{
+            border: 0px solid blue;
+            color: black;
+            
+
+        }
+        #footer>div>a{
+            color: black;
+            display: block;
+            font-weight: 500;
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-decoration: none;
+            padding-left: 20px;
+
+        }
+        #footer>div>h3{
+            padding-left: 20px;
+        }
+        #footer+hr{
+            width: 94%;
+            margin: auto;
+            margin-bottom: 25px;
+           
+        }
+        #last{
+            display: flex;
+            justify-content: space-between;
+            height: 70px;
+            border: 0px solid red;
+            padding: 0% 2%;
+        }
+        #last>div:nth-child(1){
+            width: 30%;
+            height: 100%;
+            border: 0px solid blue;
+            display: flex;
+            align-items: center;
+            color: #ccc;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        #last>div+div{
+            width: 40%;
+            height: 100%;
+            border: 0px solid blue;
+        }
+        #last>div:nth-child(1)>img{
+            width: 25%;
+            margin-right: 20px;
+            border: 0px solid green;
+            margin-bottom: 7px;
+        }
+        #last>div+div{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            font-size: 25px;
+        }
+        
+        @media all and (max-width:1000px) {
+            #mid-2>div:nth-child(1){  
+                margin: 20px 0 0 12px ;   
+                /* border: 2px solid black;   */
+            }  
+            #mid-2>div:nth-child(2){  
+                display: none;  
+            }  
+        }
+
+
+    </style>
+</head>
+<body>  
+    <p>FIVERR > GRAPHICS & DESIGN ></p>
+    <div id="div1">
+        <h1>Logo Design</h1>
+        <p>Stand out from the crowd with a logo that fits your brand personality. &nbsp;<a href="">How Fiverr Works</a></p>
+        <h3>Select logo style</h3>
+    </div>
+   
+    <div id="mid-1">
+        <div>
+            <img src="	https://fiverr-res.cloudinary.com/npm-assets/@fiverr/search_perseus/apps/flat_minimalist.d9d3dc3.svg">
+            <p>Minimalist</p>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/search_perseus/apps/signature.5cf428e.svg" alt="">
+            <p>3D</p>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/search_perseus/apps/signature.5cf428e.svg" alt="">
+            <p>Cartoon</p>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/search_perseus/apps/signature.5cf428e.svg" alt="">
+            <p>signature</p>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/search_perseus/apps/hand_drawn.3ef28f4.svg" alt="">
+            <p>Hand-drawn</p>
+        </div>
+        <div>
+            <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/search_perseus/apps/hand_drawn.3ef28f4.svg" alt="">
+            <p>Hand-drawn</p>
+        </div>
+        <div>
+            <img src="	https://fiverr-res.cloudinary.com/npm-assets/@fiverr/search_perseus/apps/flat_minimalist.d9d3dc3.svg" alt="">
+            <p>Watercolor</p>
+        </div>
+    </div>
+    <div id="mid-3">
+        <h4>297,681 services available</h4>
+        <div>
+            <p>Sort by</p>
+            <h3>Best Selling <i class="fa-solid fa-angle-down"></i></h3>
+        </div>
+    </div>
+
+    <div id="mid-2">
+        <div>
+            <select id="sort_price">
+                <option value=""> Select High / low </option>
+                <option value="high"> High to low </option>
+                <option value="low"> Low to high </option>
+            </select>
+            <select id="sort_lessthan">
+                <option value="">sort less/than </option>
+                <option value="2000"> Less then 2000 </option>
+                <option value="4000"> Less then 4000 </option>
+                <option value="10000"> Less then 10000 </option>
+                <option value="more"> More than 10000 </option>
+            </select>
+            <select id="rating">
+                <option value="">Rating </option>
+                <option value="high"> High to Low </option>
+                <option value="low"> Low to High </option>
+            </select> 
+        </div>
+        <div>
+            <form action="">
+                <div><input type="radio" name="services" vlaue="Pro_services">Pro services</div>
+                <div><input type="radio" name="services" vlaue="Local_Sellers">Local Sellers</div>
+                <div><input type="radio" name="services" vlaue="Online_Sellers">Online Sellers</div>
+            </form>
+        </div>
+    </div>
+    
+    <div id="mid-4">   
+    </div>
+
+
+    <div id="mid-5">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div> 
+    </div>
+    <hr>
+    <div id="footer">
+        <div>
+            <h3>Categories</h3>
+            <a href="">Graphic & Design</a>
+            <a href="">Digital Marketing</a>
+            <a href="">Writing & Translation</a>
+            <a href="">Video & Animation</a>
+            <a href="">Music & Audio</a>
+            <a href="">Programming & Tech</a>
+            <a href="">Data</a>
+            <a href="">Business</a>
+            <a href="">Lifestyle</a>
+            <a href="">Sitemap</a>
+            
+        </div>
+        <div>
+            <h3>About</h3>
+            <a href="">Careers</a>
+            <a href="">Press & News</a>
+            <a href="">Partnerships</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Terms & Service</a>
+            <a href="">Intellectual Property Claims</a>
+            <a href="">Investor Relations</a>
+        </div>
+        <div>
+            <h3>Support</h3>
+            <a href="">Help & Support</a>
+            <a href="">Trust & Safety</a>
+            <a href="">Selling on Fiverr</a>
+            <a href="">Buying on Fiverr</a>
+        </div>
+        <div>
+            <h3>Community</h3>
+            <a href="">Events</a>
+            <a href="">Blog</a>
+            <a href="">Forum</a>
+            <a href="">Community Standards</a>
+            <a href="">Podcast</a>
+            <a href="">Affilates</a>
+            <a href="">Invite a Friend</a>
+            <a href="">Become a Seller</a>
+        </div>
+        <div>
+            <h3>More From Fiverr</h3>
+            <a href="">Fiverr Business</a>
+            <a href="">Fiverr Pro</a>
+            <a href="">Fiverr Studios</a>
+            <a href="">Fiverr logo Maker</a>
+            <a href="">Fiverr Guides</a>
+            <a href="">Get Inspired</a>
+            <a href="">Fiverr Select</a>
+            <a href="">Clear Voice</a>
+            <a href="">Fiverr Workspace</a>
+            <a href="">Learn</a>
+            <a href="">Working not Working</a>
+        </div>
+    </div>
+    <hr>
+    <div id="last">
+        <div>
+            <img src="https://brandlogos.net/wp-content/uploads/2022/05/fiverr-logo_brandlogos.net_f2xbf.png" alt="">
+            <p>© Fiverr International Ltd. 2022</p>
+        </div>
+        <div>
+            <p><i class="fa-brands fa-twitter"></i></p>
+            <p><i class="fa-brands fa-facebook"></i></p>
+            <p><i class="fa-brands fa-linkedin"></i></p>
+            <p><i class="fa-brands fa-pinterest"></i></p>
+            <p><i class="fa-brands fa-instagram"></i></p>
+            <p><i class="fa-solid fa-globe"></i> English</p>
+            <p><i class="fa-solid fa-indian-rupee-sign"></i> INR</p>
+            <p><i class="fa-regular fa-circle"></i></p>
+        </div>
+    </div>
+    
+</body>
+</html>
+<script>
+   
+   logodata();
+    async function logodata() {
+        try {
+            let res = await fetch(`http://localhost:3000/Logo`);
+            let data = await res.json();
+            appendData(data);
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
+    function appendData(arr) {
+        document.getElementById("mid-4").innerHTML = "";
+        arr.forEach((e) => {
+
+            let d1 = document.createElement("div"); 
+
+            let image = document.createElement("img");
+            image.src = e.image;
+
+            let name = document.createElement("h3");
+            name.innerText = e.name;
+
+            let show_price = document.createElement("p");
+            show_price.innerText = "Price: " + e.show_price;
+
+            let rating = document.createElement("p");
+            rating.innerText = `Ratings: ${e.rating}`;
+
+            let cart = document.createElement("button");
+            cart.innerText = "Add To Cart"; 
+            cart.addEventListener("click", function () {
+                addToCart(e);
+            })
+            d1.append(image, name, show_price,rating, cart);
+            document.getElementById("mid-4").append(d1);
+        });
+    }
+
+    function addToCart(e) {
+        let k = JSON.parse(localStorage.getItem("cart")) || [];
+        k.push(e);
+        localStorage.setItem("cart", JSON.stringify(k));
+    }
+
+    document.getElementById("sort_price").addEventListener("change", function () {
+        let k = document.getElementById("sort_price").value;
+        if (k == "high") {
+            PriceSortHigh();
+        }
+        else {
+            PriceSortLow();
+        }
+    })
+
+    async function PriceSortHigh() {
+        try {
+            let res = await fetch(`http://localhost:3000/Logo?_sort=price&_order=desc`);
+            let data = await res.json();
+            appendData(data);
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
+    async function PriceSortLow() {
+        try {
+            let res = await fetch(`http://localhost:3000/Logo?_sort=price&_order=asc`);
+            let data = await res.json();
+            appendData(data);
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
+    document.getElementById("sort_lessthan").addEventListener("change", function () {
+        let x = document.getElementById("sort_lessthan").value;
+        if (x == "more") {
+            priceMorethan(x);
+        }
+        else {
+            pricelessthan(x);
+        }
+    })
+
+    async function priceMorethan(x) {
+        try {
+            let res = await fetch(`http://localhost:3000/Logo?price_gte=10000`);
+            let data = await res.json();
+            //   console.log(data);
+            appendData(data);
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
+    async function pricelessthan(x) {
+        try {
+            let res = await fetch(`http://localhost:3000/Logo?price_lte=${x}`);
+            let data = await res.json();
+            //   console.log(data);
+            appendData(data);
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
+    document.getElementById("rating").addEventListener("change", function (){
+        let m = document.getElementById("rating").value; 
+        if(m =="high"){
+            ratingGreat();
+        }
+        else{
+            ratingless(); 
+        }
+    })
+
+    async function ratingGreat() {
+        try {
+            let res = await fetch(`http://localhost:3000/Logo?_sort=rating&_order=desc`);
+            let data = await res.json();
+            //   console.log(data);
+            appendData(data);
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
+    async function ratingless() {
+        try {
+            let res = await fetch(`http://localhost:3000/Logo?_sort=rating&_order=asc`);
+            let data = await res.json();
+            //   console.log(data);
+            appendData(data);
+        } catch (err) {
+            console.log(err);
+        }
+    }
+   
+</script>
+
+
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="./edting.css">
+  </head>
+  <body>
+    <div>
+      <div id="post_box">
+        <div>
+          <h1>Add Post</h1>
+          <input type="text" id="name" placeholder="Enter Name" required />
+          <input type="text" id="image" placeholder="Enter image-URL" required /> 
+          <input
+            type="text"
+            id="Show_price"
+            placeholder="Enter price with (₹)" 
+            required
+          />
+          <input type="text" id="price" placeholder="Enter price" required />
+          <input
+            type="text"
+            id="rating"
+            placeholder="Enter rating" 
+            required 
+          /> 
+          <select id="Data_type">
+            <option value=""> select data type </option>
+            <option value="Logo"> Logo Design </option>
+            <option value="fonts">Fonts & Typography</option>
+          </select>
+          <button id="create_btn" class="btn">Create Post</button>
+          <div class="update">
+            <h2>Update Post</h2>
+            <input type="text" id="update_img" placeholder="Enter img-URL" />
+            <input
+              type="text"
+              id="update_show_Price"
+              placeholder="Enter Sow-Price"
+            />
+            <input type="text" id="update_Price" placeholder="Enter Price" />
+            <button disabled id="update_detail" class="btn">Update Post</button>
+          </div>
+          <div id="sort_div">
+            <h2>Sort By Price</h2>
+            <button class="btn" id="high">High to low</button>
+            <button class="btn" id="low">Low to high</button>
+            <select id="priceSort" class="selc">
+              <option value="2000">less than 2,000</option>
+              <option value="6000">less than 6,000</option>
+              <option value="10000">less than 10,000</option>
+              <option value="more">Greater than 10,000</option>
+            </select>
+          </div>
+        </div> 
+        <div id="Product_detail"> 
+          <div id="pages">
+            <div onclick="optionToLogo()">Logo Design</div>
+            <div onclick="optionTofont()">Fonts & Typography</div>
+          </div>
+          <div id="data_append"></div>
+        </div>
+      </div>
+    </div> 
+  </body>
+</html>
+
+<script src="./edting.js"></script>
+
