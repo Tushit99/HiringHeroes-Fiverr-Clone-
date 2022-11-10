@@ -179,6 +179,8 @@
 }
 #log_in_with_facebook{
     border: 1px solid white;
+    display: flex;
+    justify-content: center;
     align-items: center;
     padding-bottom: 8px;
     border-radius: 20px;
@@ -213,8 +215,9 @@ a.facebook .facebook-icon{
 }
 
 .facebook-icon{
-    position: absolute;
-    top: 62.8%;
+    /* position: absolute; */
+    /* top: 62.8%; */
+    margin-top: 12px;
     left: 70px;
     transform: translateY(-50%);
 }
