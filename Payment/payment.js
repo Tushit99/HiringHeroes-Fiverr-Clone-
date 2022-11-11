@@ -104,7 +104,7 @@ const Total=()=>{
     if(promo_inp.value=='FIRSTHERO'){
         sum=sum-(20/100)*sum
         total_span.innerText=sum+265.42
-        total_span_2.innerText=sum+265.42
+        total_span_2.innerText=Math.round(sum+265.42)
 
         pop_img.src='https://cdn3.iconfinder.com/data/icons/wedding-89/64/Celebration-congratulation-party-anniversary-64.png'
         msg.innerText="Hurray! You Got 20% Discount"
@@ -115,7 +115,7 @@ const Total=()=>{
         Hide_popup()
     }else{
         total_span.innerText=sum+265.42
-        total_span_2.innerText=sum+265.42
+        total_span_2.innerText=Math.round(sum+265.42)
         pop_img.src='https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678069-sign-error-64.png'
         msg.innerText="Oops! Invalid Coupon Code"
         msg_2.innerText=null
@@ -130,7 +130,7 @@ const Total=()=>{
 
 
     total_span.innerText=sum+265.42
-    total_span_2.innerText=sum+265.42
+    total_span_2.innerText=Math.round(sum+265.42)
 }
 
 Total()
