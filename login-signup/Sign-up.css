@@ -4,10 +4,14 @@
     margin: 0; 
     padding: 0; 
  }
+ body{
+    background-color: rgb(254, 254, 254);
+ }
  .container{
     background-color: whitesmoke;
+    margin-top: 20px;
      width: 100%;
-     height: 100vh;
+     height: auto;
      font-family: sans-serif;
      display: flex;
      gap: 40px;
@@ -18,7 +22,7 @@
  }
  .card{
      width: 400px;
-     height: 90vh;
+     height: 670px;
      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
      perspective: 1000px;
      /* border: 10px solid black; */
@@ -182,7 +186,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 8px;
     border-radius: 20px;
     background-color: #4267b2;
     color: #fff;
@@ -194,6 +197,7 @@
     font-size: 16px;
     margin-left: 25px;
     font-weight: 600;
+    margin-bottom: 10px;
 }
 #log_in_with_facebook a{
 
@@ -203,24 +207,19 @@
 }
 
 a.facebook .facebook-icon{
-    height: 28px;
-    width: 28px;
+    height: 25px;
+    width: 27px;
     color: #0171d3;
-    font-size: 20px;
+    font-size: 22px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #fff;
-}
-
-.facebook-icon{
-    /* position: absolute; */
-    /* top: 62.8%; */
     margin-top: 12px;
-    left: 70px;
     transform: translateY(-50%);
 }
+
 
 #log_in_with_google{
     margin-top: 20px;
@@ -241,14 +240,14 @@ a.facebook .facebook-icon{
 
 #log_in_with_google span{
     font-size: 17px;
-    margin-left: 48px;
+    margin-left: 40px;
     color: black;
     font-weight: 600;
 }
 
 .google-icon{
     font-size: 23px;
-    margin-left: -40px;
+    margin-left: -20px;
     color: black;
 }
 
@@ -271,4 +270,13 @@ a.facebook .facebook-icon{
 }
 .adv-img{
     width: 90%;
+}
+
+
+@media screen and (max-width: 1000px){
+    #adv{
+        display: none;
+    }
+
+
 }
