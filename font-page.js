@@ -47,7 +47,8 @@ const getData=async(page_id)=>{ // Getting 12 data per page
 
 
 let cart_data=JSON.parse(localStorage.getItem('cart')) || []  // Creating Array for cart data/or getting from LS
-
+let msg=document.getElementById('msg')
+let popup_div=document.getElementById('popup')
 
 const appendData=(data)=>{ // Appendind data
     let container=document.getElementById('container') // appending div
@@ -102,6 +103,13 @@ const appendData=(data)=>{ // Appendind data
         cart_btn.onclick=()=>{//this fn will store the clicked data in the form of array of obj as "cart" as a key. 
             cart_data.push(el)
             localStorage.setItem('cart',JSON.stringify(cart_data))
+            pop_img.src='https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/check-circle-green-64.png'
+            msg.innerText="Product Added To Cart!"
+            popup_div.style.border='1px solid black'
+            popup_div.style.backgroundColor='#5edfa2'
+            popup_div.style.display='flex'
+            Hide_popup()
+            
         }
 
 
@@ -281,3 +289,26 @@ mediaQuery.addListener(handleTabletChange)
 
 // Initial check
 handleTabletChange(mediaQuery)
+
+
+
+
+
+
+
+
+let Hide_popup=()=>{
+
+    let i=0
+let x=setInterval(() => {
+    popup_div.style.display='none'
+  i++
+  if(i==1){
+    clearInterval(x)
+  }
+
+
+      
+}, 3000);
+
+}

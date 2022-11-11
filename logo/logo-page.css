@@ -71,6 +71,38 @@ option{
 #prev{
     display: none;
 }
+#popup{
+    position: relative;
+    top: -1870px;
+    left: 290px;
+
+    top: 0;
+
+    position: -webkit-sticky; /* Safari */
+    position: fixed;
+    z-index: 4;
+
+    border: 1px solid black;
+    width: 50%;
+    height: 80px;
+    background-color:#5edfa2;
+    opacity: 0.8;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius:8PX ;
+}
+#popup>div>p:first-child{
+    font-weight: bold;
+    font-size: 20px;
+}
+#popup img{
+    display: block;
+    width: 5%;
+    margin-right: 30px;
+    opacity: 1;
+
+}
 
 
 
