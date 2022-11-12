@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0; 
+    padding: 0; 
+ }
+ .container{
+    background-color: whitesmoke;
+     width: 100%;
+     height: 100vh;
+     font-family: sans-serif;
+     display: flex;
+     gap: 40px;
+     align-items: center;
+     justify-content: center;
+     /* background-image:url( https://www.shutterstock.com/shutterstock/photos/753798850/display_1500/stock-photo-movie-projector-on-a-dark-background-with-light-beam-high-contrast-image-753798850.jpg) ; */
+ 
+ }
+ .card{
+     width: 400px;
+     height: 90vh;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+     perspective: 1000px;
+     /* border: 10px solid black; */
+     background-color: white;
+ 
+ }
+ .innerbox{
+     position: relative;
+     width: 100%;
+     height: 100%;
+     transform-style: preserve-3d;
+     transition: transform 1s;
+ }
+ 
+ .cardFront, .cardBack{
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     background-position: center;
+     background-size: cover;
+     /* background-image: linear-gradient(rgba(219, 212, 212, 0.8),rgba(103, 98, 98, 0.8)),url(https://previews.123rf.com/images/bbbaaaaz/bbbaaaaz1607/bbbaaaaz160700001/61569391-modern-background-with-plexus-style-perfect-for-website-or-banner-backgrounds-or-as-a-wallpaper.jpg); */
+     padding: 55px;
+     box-sizing: border-box;
+     backface-visibility: hidden;
+     color:black;
+ 
+ }
+ .cardFront{
+    margin-top: 50px;
+ }
+ .cardBack{
+     transform: rotateY(180deg);
+ 
+ }
+ 
+ .card h2{
+     font-size: 24px;
+     font-weight: normal;
+     text-align: center;
+     margin-bottom: 20px;
+ 
+ }
+ #forget{
+    color: black;
+    font-size: 13px;
+    font-weight: 500  ;
+ }
+ .inputBox{
+     width: 100%;
+     background: transparent;
+     border: 1px solid black;
+     margin: 6px 0;
+     height: 32px;
+     padding: 0 10px;
+     border-radius: 20px;
+     box-sizing: border-box;
+     outline: none;
+     text-align: center;
+     color:black;
+ }
+ 
+ ::placeholder{
+     color:black ;
+     font-size: 14px;
+     font-weight: 600;
+ }
+ 
+ #submit_btn{
+     width: 100%;
+     background: transparent;
+     border: 1px solid black;
+     margin:35px 0 10px;
+     height: 32px;
+     font-size: 16px;
+     font-weight: 600;
+     border-radius: 20px;
+     padding: 0 10px;
+     box-sizing: border-box;
+     outline: none;
+     color: black;
+     cursor: pointer;
+ }
+ button{
+        width: 100%;
+        background: transparent;
+        border: 1px solid black;
+        margin:35px 0 10px;
+        height: 32px;
+        font-size: 12px;
+        border-radius: 20px;
+        padding: 0 10px;
+        box-sizing: border-box;
+        outline: none;
+        color: black;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 600;
+    
+ }
+ 
+ .submitBtn{
+     position: relative;
+ 
+ }
+ 
+ .submitBtn::after{
+     content:'\27a4';
+     color:black ;
+     line-height:32px;
+     font-size:17px;
+     height: 32px;
+     width:32px;
+     border-radius: 50%;
+     background-color: rgb(187, 175, 175);
+     position: absolute;
+     right: -1px;
+     top:-1px;
+ }
+ 
+ span{
+     font-size: 13px;
+     margin-left: 10px;
+ }
+ 
+ .card .btn{
+     margin-top: 70px;
+ 
+ }
+ #btn{
+    margin-top: 69px;
+    font-size: 16px;
+ }
+ .card a{
+     color: #fff;
+     text-decoration: none;
+     display: block;
+     text-align: center;
+     font-size: 13px;
+     margin-top: 13px;
+ }
+
+ .line{
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin: 36px 0;
+    background-color: black;
+}
+.line::before{
+    content: 'Or';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    color: black;
+    padding: 0 15px;
+}
+#log_in_with_facebook{
+    border: 1px solid white;
+    align-items: center;
+    padding-bottom: 8px;
+    border-radius: 20px;
+    background-color: #4267b2;
+    color: #fff;
+    
+
+}
+
+#log_in_with_facebook span{
+    font-size: 16px;
+    margin-left: 25px;
+    font-weight: 600;
+}
+#log_in_with_facebook a{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a.facebook .facebook-icon{
+    height: 28px;
+    width: 28px;
+    color: #0171d3;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.facebook-icon{
+    position: absolute;
+    top: 62.8%;
+    left: 70px;
+    transform: translateY(-50%);
+}
+
+#log_in_with_google{
+    margin-top: 20px;
+    border: 1px solid white;
+    align-items: center;
+    padding-bottom: 8px;
+    border-radius: 20px;
+    background-color: rgb(245, 236, 236);
+    color: black;
+}
+
+#log_in_with_google a{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#log_in_with_google span{
+    font-size: 17px;
+    margin-left: 48px;
+    color: black;
+    font-weight: 600;
+}
+
+.google-icon{
+    font-size: 23px;
+    margin-left: -40px;
+    color: black;
+}
+
+
+#adv{
+    width: 40%;
+    height: 90vh;
+    /* border: 2px solid red; */
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,auto);
+    gap: 20px;
+    text-align: center;
+
+}
+
+.adv{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+.adv-img{
+    width: 90%;
+}
