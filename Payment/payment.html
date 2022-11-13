@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HIRING HEROES</title>
+    <link rel="stylesheet" href="/Payment/payment.css" />
+  </head>
+  <body>
+    <div id="nav">
+      <div style="cursor:pointer ;" onclick="window.location.href='../afterlogin.html'">
+        <img
+          id="logo"
+          src="https://i.postimg.cc/GpZTZ0g7/HIRING-HEROES.png"
+          alt=""
+        />
+      </div>
+      <div id="confirm_1">
+        <button>1</button>
+        <p>Confirm & Pay</p>
+        >
+      </div>
+      <div id="confirm_2">
+        <button>2</button>
+        <p>Submit Requirements</p>
+      </div>
+    </div>
+    <hr />
+
+    <div id="main">
+      <div id="option">
+        <p >Payment Options</p> 
+        <div id="card">
+          <p>Credit & Debit Cards</p>
+          <img src="https://i.postimg.cc/Bvykncf3/visa.png" alt="" />
+        </div>
+        <div id="card_detail">
+          <div>
+            <p>Card Number</p>
+            <input type="number" name="" id="card_number" />
+          </div>
+          <div>
+            <p>
+              Expiration Date
+              <span
+                >Security Code
+                <img
+                  class="width"
+                  src="https://cdn2.iconfinder.com/data/icons/picons-basic-2/57/basic2-088_question-64.png"
+                  alt=""
+              /></span>
+            </p>
+            <div>
+              <input
+                type="number"
+                placeholder="MM/YY"
+                name=""
+                id="expiry"
+              /><input type="number" name="" id="cvv" placeholder="CVV" />
+            </div>
+          </div>
+          <div>
+            <p>First Name</p>
+            <input type="text" name="" id="f_name" />
+          </div>
+          <div>
+            <p>Last Name</p>
+            <input type="text" name="" id="l_name" />
+          </div>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" name="" id="" />
+          <p>Save as default</p>
+          <img
+            class="width-2"
+            src="https://cdn2.iconfinder.com/data/icons/picons-basic-2/57/basic2-088_question-64.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <div id="checkout">
+        <p>Apply Promo code "FIRSTHERO" to get 20% discount valid for new users only!</p>
+        <div class="first_div">
+          <img
+            id="image"
+            src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/99343776/original/d80c065317c3001cdee1fd36f49c8da29330dff7.jpg"
+            alt=""
+          /><span>
+            I will design custom elegant and luxury unique typography</span
+          >
+          <span>Typo Design</span>
+          <span>₹<span id="price"></span></span>
+        </div>
+        <div id="promo_div">
+          <input id="promo" type="text" name="" id="" /><button id="apply">
+            Apply
+          </button>
+        </div>
+
+        <div>
+          <span>Service fee</span><span>₹265.42</span><span>Total</span
+          ><span>₹<span class="total">0000</span></span
+          ><span>Total Delivery Time</span><span>4 Days</span>
+        </div>
+        <button id="pay">Confirm & Pay</button>
+        <p><img src="" alt="" /> SSL Secure Payment</p>
+        <p>
+          You will be charged <span id="total-2"></span> Total amount includes
+          currency conversion fees.
+        </p>
+      </div>
+    </div>
+    <div id="popup">
+        <img id="pop_img" src="" alt="">
+        <div><p id="msg" >Thank You For Your Purchase!</p><p id="msg-2" >A receipt was sent to your email address</p></div>
+    </div>
+  </body>
+  <script src="./payment.js"></script>
+</html>

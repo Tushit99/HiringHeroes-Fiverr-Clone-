@@ -1,0 +1,230 @@
+#nav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+    padding-left: 50px;
+}
+#logo{
+    width: 50%;
+    display: block;
+    width: 100%;
+}
+#nav>div:first-child{
+    width: 15%;
+}
+#nav>div{
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: grey;
+      
+}
+#nav>div button{
+    width: 30px;
+    height: 30px;
+    border-radius: 20PX;
+    font-weight: bold;
+    border: none;
+    background-color: #1dbf73;
+    color: #ffff;
+}
+
+#confirm_1>p{
+    color: #1dbf73;
+}
+#confirm_2{
+    background-color :white;
+    color: grey;
+}
+#nav>#confirm_2>button{
+    background-color: grey;
+
+}
+#main{
+    display: grid;
+    grid-template-columns: 50% 30%;
+    height: 600px;
+    gap: 10%;
+    justify-content: center;
+    margin-top: 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    
+}
+#option{
+    background-color: #fafafa;
+    color: #404145   ;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #fafafa;
+}
+#card{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    background-color: #ffffff;
+}
+#card img{
+    width: 30%;
+    height: 30%;
+}
+#card_detail{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 50px;
+}
+#card_detail>div{
+    margin-left: 20px;
+}
+#card_detail>div>#p_cvv>p{
+    width: 50%;
+    display: block;
+}
+input[type=number]{
+    width: 70%;
+    height: 35px;
+    outline: none;
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=text]{
+    width: 70%;
+    height: 35px;
+    outline: none;
+
+}
+#expiry,#cvv{
+    margin-right: 10px;
+    width:40%
+}
+input{
+    background-color:  #ffffff;
+    border: 0.5px solid grey;
+}
+.width{
+    width: 5%;
+}
+.width-2{
+
+    width: 3%;
+    height: 2%;
+    display: block;
+}
+#checkout{
+    background-color: #fafafa;
+}
+.checkbox{
+    display: flex;
+    align-items: center;
+}
+.checkbox>p{
+    width: 20%;
+}
+input[type=checkbox]{
+    margin-left: 20px;
+    
+}
+#checkout{
+    text-align: center;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    
+}
+#checkout>div{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    font-size: 18px;
+    color: #404145;
+    gap: 20px;
+}
+#image{
+    width: 60%;
+    border-radius: 10px;
+}
+#checkout>div{
+    width: 80%;
+    margin: auto;
+}
+#checkout button{
+    display: block;
+    margin: auto;
+}
+#checkout input{
+    display: block;
+    margin: auto;
+}
+#checkout>#promo_div{
+    display: flex;
+    justify-content: baseline;
+    
+}
+#promo{
+    width: 40%;
+    
+}
+#promo>div button{
+    display: block;
+}
+#pay{
+    width: 80%;
+    height: 40px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 4px;
+}
+#pay:hover{
+    color: #000000;
+    border: 1px solid #1dbf73;
+    background-color: #ffffff;
+}
+#apply{
+    background-color:#1dbf73;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    width: 50%;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+}
+input, select, textarea{
+    font-size: 15px;
+    font-weight: bold;
+}
+#popup{
+    position: relative;
+    top: -630px;
+    left: 290px;
+
+    border: 1px solid black;
+    width: 50%;
+    height: 80px;
+    background-color:#5edfa2;
+    opacity: 0.8;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius:8PX ;
+}
+#popup>div>p:first-child{
+    font-weight: bold;
+    font-size: 20px;
+}
+#popup img{
+    display: block;
+    width: 5%;
+    margin-right: 30px;
+    opacity: 1;
+
+}

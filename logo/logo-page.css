@@ -1,4 +1,6 @@
-body {
+/* ****No Media query for now********** */
+
+body{
     width: 90%; 
     margin: auto; 
 }
@@ -138,7 +140,6 @@ body {
 }
 
 
-
 /* CSS for Static data */
 #heading{
     font-weight: bolder;
@@ -211,7 +212,7 @@ option{
     position: relative;
     top: -1870px;
     left: 290px;
-    position: sticky;
+
     top: 0;
 
     position: -webkit-sticky; /* Safari */
@@ -327,6 +328,85 @@ option{
     border: 1px solid #1dbf73;
 }
 
+#CartPg{
+    cursor: pointer;  
+    font-size: large;  
+}
+
+/* footer */
+
+#footer{
+    /* display: grid;
+    grid-template-columns: repeat(5, 1fr); */ 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    height: auto;
+    border: 0px solid red;
+    padding: 25px;
+}
+#footer h3{
+    font-family: Arial, Helvetica, sans-serif;
+    border: 0px solid red;
+    
+}
+#footer>div{
+    border: 0px solid blue;
+    color: black;
+}
+#footer>div>a{
+    color: black;
+    display: block;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20px;
+} 
+#footer>div>h3{
+    padding-left: 20px;
+}
+#footer+hr{
+    width: 94%;
+    margin: auto;
+    margin-bottom: 25px;
+   
+}
+#last2{
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    border: 0px solid red;
+    padding: 0% 2%;
+}
+#last2>div:nth-child(1){
+    width: 30%;
+    height: 100%;
+    border: 0px solid blue;
+    display: flex;
+    align-items: center;
+    color: #ccc;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+#last2>div+div{
+    width: 40%;
+    height: 100%;
+    border: 0px solid blue;
+}
+#last2>div:nth-child(1)>img{
+    width: 25%;
+    margin-right: 20px;
+    border: 0px solid green;
+    margin-bottom: 7px;
+}
+#last2>div+div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; 
+    font-size: 25px;
+}
 
 
 
@@ -353,7 +433,9 @@ option{
     
     }
 
-
+    #nav>*{
+        display: none; 
+    }
 
 
 
@@ -362,7 +444,7 @@ option{
 @media all and (min-width:300px) and (max-width:768px){
     #container{
         display: grid;
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(2,1fr);
         gap: 10px;
         margin-top: 30px;
     }
@@ -430,9 +512,11 @@ option{
         margin-left: 10px;
     
     }
+    #nav>*{
+        display: none; 
+    }
 
 
 }
-
 
 
