@@ -831,6 +831,12 @@
       "email": "tushitsaxena4@gmail.com",
       "password": "qwerty",
       "id": 7
+    },
+    {
+      "name": "Tushit",
+      "email": "tushitsaxena4@gmail.com",
+      "password": "qwerty12",
+      "id": 8
     }
   ],
   "brands": [
