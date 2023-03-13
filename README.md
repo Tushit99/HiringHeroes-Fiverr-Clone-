@@ -8,15 +8,12 @@ Styluxe is an one-stop-shop for all your shopping needs. With a vast collection 
   <tr>
     <td valign="top"><img width="699" alt="image" src="./readmeing/home.png"></td>
 
-  <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677481572/samples/mobile_4_x9chbh.png"/></td>
+  <!-- <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677481572/samples/mobile_4_x9chbh.png"/></td> -->
   </tr>
 </table>
 
 # Product Page
-
-<img src="./readmeing/product.png"/>
-<img width="672" alt="image" src="https://user-images.githubusercontent.com/97578587/224760475-21b75e59-8f19-41ec-840f-3c027ab12eb7.png">
-
+ 
 <p align="center" width="100%">
 <table>
   <tr>
