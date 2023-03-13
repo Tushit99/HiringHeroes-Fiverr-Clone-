@@ -21,7 +21,7 @@ Styluxe is an one-stop-shop for all your shopping needs. With a vast collection 
 <table>
   <tr>
     <td valign="top"><img src="./readmeing/product.png"/></td>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677482003/samples/mobile_9_wt4ug9.png"/></td>
+    <!-- <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677482003/samples/mobile_9_wt4ug9.png"/></td> -->
   </tr>
 </table>
 </p>
@@ -32,7 +32,7 @@ Styluxe is an one-stop-shop for all your shopping needs. With a vast collection 
 <table>
   <tr>
     <td valign="top"><img src="./readmeing/cart.png"/></td>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677483004/samples/mobile_10_kpvztr.png"/></td>
+    <!-- <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677483004/samples/mobile_10_kpvztr.png"/></td> -->
   </tr>
 </table>
 
@@ -41,7 +41,7 @@ Styluxe is an one-stop-shop for all your shopping needs. With a vast collection 
 <table>
   <tr>
     <td valign="top"><img src="./readmeing/payment.png"/></td>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677483133/samples/mobile_13_xiqvii.png"/></td>
+    <!-- <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677483133/samples/mobile_13_xiqvii.png"/></td> -->
   </tr>
 </table>
 
@@ -50,7 +50,7 @@ Styluxe is an one-stop-shop for all your shopping needs. With a vast collection 
 <table>
   <tr>
     <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677483501/samples/mobile_16_eckdri.png"/></td>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677481068/mobile_3_eymwp5.png"/></td>
+    <!-- <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677481068/mobile_3_eymwp5.png"/></td> -->
   </tr>
 </table>
   
