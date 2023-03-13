@@ -2,7 +2,7 @@
 
 Styluxe is an one-stop-shop for all your shopping needs. With a vast collection of products of fashion and clothing, we offer a seamless shopping experience. Our user-friendly interface and secure payment options ensure a hassle-free shopping experience for our customers. Shop with us today and discover the convenience of online shopping!
 
-# Homepage
+# Homepage 
 
 <table>
   <tr>
@@ -14,32 +14,24 @@ Styluxe is an one-stop-shop for all your shopping needs. With a vast collection 
 
 # Product Page
 
-<img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677481871/samples/mobile_6_xj1exm.png"/>
+<img src="./readmeing/product.png"/>
 <img width="672" alt="image" src="https://user-images.githubusercontent.com/97578587/224760475-21b75e59-8f19-41ec-840f-3c027ab12eb7.png">
 
 <p align="center" width="100%">
 <table>
   <tr>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677481581/samples/mobile_5_hp6t6h.png"/></td>
+    <td valign="top"><img src="./readmeing/product.png"/></td>
     <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677482003/samples/mobile_9_wt4ug9.png"/></td>
   </tr>
 </table>
 </p>
 
-# SingleProduct Page
-
-<table>
-  <tr>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677481874/samples/mobile_7_lnlhm1.png"/></td>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677481891/samples/mobile_8_j8sue5.png"/></td>
-  </tr>
-</table>
 
 # Cart Page
 
 <table>
   <tr>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677483028/samples/mobile_11_jjo56z.png"/></td>
+    <td valign="top"><img src="./readmeing/cart.png"/></td>
     <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677483004/samples/mobile_10_kpvztr.png"/></td>
   </tr>
 </table>
@@ -48,17 +40,8 @@ Styluxe is an one-stop-shop for all your shopping needs. With a vast collection 
 
 <table>
   <tr>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677483134/samples/mobile_12_hoixlj.png"/></td>
+    <td valign="top"><img src="./readmeing/payment.png"/></td>
     <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677483133/samples/mobile_13_xiqvii.png"/></td>
-  </tr>
-</table>
-
-# Profile page
-
-<table>
-  <tr>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677483292/samples/mobile_15_nghpq1.png"/></td>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677483296/samples/mobile_14_m1rbpb.png"/></td>
   </tr>
 </table>
 
@@ -70,43 +53,7 @@ Styluxe is an one-stop-shop for all your shopping needs. With a vast collection 
     <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677481068/mobile_3_eymwp5.png"/></td>
   </tr>
 </table>
-
-# Admin Panel : Add Product Page
-
-<table>
-  <tr>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677483712/samples/mobile_18_kmaq03.png"/></td>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677483711/samples/mobile_17_wyzonn.png"/></td>
-  </tr>
-</table>
-
-# Admin Panel : Edit Product Page
-
-<table>
-  <tr>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677483831/samples/mobile_20_phdm3m.png"/></td>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677483834/samples/mobile_19_tenx3k.png"/></td>
-  </tr>
-</table>
-
-# Admin Panel : Manage Orders Page
-
-<table>
-  <tr>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677483975/samples/mobile_21_cdcvp9.png"/></td>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677483972/samples/mobile_22_ujol9j.png"/></td>
-  </tr>
-</table>
-
-# Admin Panel : Manage Admin Page
-
-<table>
-  <tr>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677484126/samples/mobile_24_hy21vq.png"/></td>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677484126/samples/mobile_23_ydfc50.png"/></td>
-  </tr>
-</table>
-
+  
 # Tech Stack
 
 # Front-End

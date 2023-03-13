@@ -58,7 +58,7 @@ let admin = [
   },
   {
     name: "Faisal", 
-    email: "faisal@gmail.com",
+    email: "faisal@gmail.com", 
     password: "masai@1234",
   },
   {

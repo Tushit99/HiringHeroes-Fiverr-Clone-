@@ -129,7 +129,10 @@ input[type="file"] {
 
 
 
-@media all and (max-width: 560px) {
+@media all and (max-width: 560px) { 
+    #post_box{
+        display: grid; 
+    }
     #data_append {
         grid-template-columns: repeat(2, 1fr);
     }
