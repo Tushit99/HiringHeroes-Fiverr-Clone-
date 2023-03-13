@@ -49,7 +49,7 @@ Styluxe is an one-stop-shop for all your shopping needs. With a vast collection 
 
 <table>
   <tr>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677483501/samples/mobile_16_eckdri.png"/></td>
+    <td valign="top"><img src="./readmeing/admin.png"/></td>
     <!-- <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677481068/mobile_3_eymwp5.png"/></td> -->
   </tr>
 </table>
