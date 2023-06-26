@@ -6,7 +6,7 @@ let opt_data = "Logo";
 logodata();
 async function logodata() {
   try {
-    let res = await fetch(`http://localhost:8080/${opt_data}`);
+    let res = await fetch(`https://fiver-ox6s.onrender.com/${opt_data}`);
     let data = await res.json(); 
     appendData(data); 
   } catch (err) {
@@ -47,7 +47,7 @@ function appendData(arr) {
 // ================================
 //   delete function
 async function delme(id) {
-  let res = await fetch(`http://localhost:8080/${opt_data}/${id}`, {
+  let res = await fetch(`https://fiver-ox6s.onrender.com/${opt_data}/${id}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -65,7 +65,7 @@ document.getElementById("low").addEventListener("click", function () {
 async function sortLow() {
   try {
     let res = await fetch(
-      `http://localhost:8080/${opt_data}?_sort=price&_order=asc`
+      `https://fiver-ox6s.onrender.com/${opt_data}?_sort=price&_order=asc`
     );
     let data = await res.json();
     //   console.log(data);
@@ -83,7 +83,7 @@ document.getElementById("high").addEventListener("click", function () {
 async function sortHigh() {
   try {
     let res = await fetch(
-      `http://localhost:8080/${opt_data}?_sort=price&_order=desc`
+      `https://fiver-ox6s.onrender.com/${opt_data}?_sort=price&_order=desc`
     );
     let data = await res.json();
     //   console.log(data);
@@ -106,7 +106,7 @@ document.getElementById("priceSort").addEventListener("change", function () {
 //   price less than
 async function priceless(sel) {
   try {
-    let res = await fetch(`http://localhost:8080/${opt_data}?price_lte=${sel}`);
+    let res = await fetch(`https://fiver-ox6s.onrender.com/${opt_data}?price_lte=${sel}`);
     let data = await res.json();
     //   console.log(data);
     appendData(data);
@@ -118,7 +118,7 @@ async function priceless(sel) {
 //   price more than
 async function priceMorethan(sel) {
   try {
-    let res = await fetch(`http://localhost:8080/${opt_data}?price_gte=10000`);
+    let res = await fetch(`https://fiver-ox6s.onrender.com/${opt_data}?price_gte=10000`);
     let data = await res.json();
     //   console.log(data);
     appendData(data);
@@ -181,7 +181,7 @@ async function SaveDataType() {
     rating: rating,
   };
 
-  let res = await fetch(`http://localhost:8080/${Data_type}`, {
+  let res = await fetch(`https://fiver-ox6s.onrender.com/${Data_type}`, {
     method: "POST",
     body: JSON.stringify(obj),
     headers: {
