@@ -16,7 +16,7 @@ foot.innerHTML = footer();
 const getAllData=async()=>{ //Getting all data for creating paginate buttons
 
     try{
-        let res=await fetch('http://localhost:8080/business')
+        let res=await fetch('https://fiver-ox6s.onrender.com/business')
         let data=await res.json()
     
         Create_btn(data.length)
@@ -46,7 +46,7 @@ const Create_btn=(total_data)=>{  //Creating Paginate Btns
 const getData=async(page_id)=>{ // Getting 12 data per page
 
     try{
-        let res=await fetch(`http://localhost:8080/business?_page=${page_id}&_limit=12`)
+        let res=await fetch(`https://fiver-ox6s.onrender.com/business?_page=${page_id}&_limit=12`)
         let data=await res.json()
     
         appendData(data)
@@ -165,7 +165,7 @@ select_budget.oninput=()=>{
 const Sort_by_range=async(order)=>{
 
     try{
-        let res=await fetch(`http://localhost:8080/business?price_${order}`)
+        let res=await fetch(`https://fiver-ox6s.onrender.com/business?price_${order}`)
         let data=await res.json()
         console.log(data)
         appendData(data)
@@ -195,7 +195,7 @@ sort.oninput=()=>{
 const Sort=async(order)=>{
 
     try{
-        let res=await fetch(`http://localhost:8080/business?_sort=price&_order=${order}`)
+        let res=await fetch(`https://fiver-ox6s.onrender.com/business?_sort=price&_order=${order}`)
         let data=await res.json()
         appendData(data)
 
@@ -224,7 +224,7 @@ rating_btn.oninput=()=>{
 
 const Sort_by_rating=async(order)=>{
      try{
-        let res=await fetch(`http://localhost:8080/business?_sort=rating&_order=${order}`)
+        let res=await fetch(`https://fiver-ox6s.onrender.com/business?_sort=rating&_order=${order}`)
         let data=await res.json()
         appendData(data)
 
