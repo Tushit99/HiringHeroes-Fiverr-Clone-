@@ -12,7 +12,7 @@ document.getElementById("nav").innerHTML = navbar2();
 const getAllData=async()=>{ //Getting all data for creating paginate buttons
 
     try{
-        let res=await fetch('http://localhost:8080/fonts')
+        let res=await fetch('https://fiver-ox6s.onrender.com/fonts')
         let data=await res.json()
     
         Create_btn(data.length)
@@ -56,7 +56,7 @@ document.getElementById("loginPage").addEventListener("click", function (){
 const getData=async(page_id)=>{ // Getting 12 data per page
 
     try{
-        let res=await fetch(`http://localhost:8080/fonts?_page=${page_id}&_limit=12`)
+        let res=await fetch(`https://fiver-ox6s.onrender.com/fonts?_page=${page_id}&_limit=12`)
         let data=await res.json()
     
         appendData(data)
@@ -175,7 +175,7 @@ select_budget.oninput=()=>{
 const Sort_by_range=async(order)=>{
 
     try{
-        let res=await fetch(`http://localhost:8080/fonts?price_${order}`)
+        let res=await fetch(`https://fiver-ox6s.onrender.com/fonts?price_${order}`)
         let data=await res.json()
         console.log(data)
         appendData(data)
@@ -205,7 +205,7 @@ sort.oninput=()=>{
 const Sort=async(order)=>{
 
     try{
-        let res=await fetch(`http://localhost:8080/fonts?_sort=price&_order=${order}`)
+        let res=await fetch(`https://fiver-ox6s.onrender.com/fonts?_sort=price&_order=${order}`)
         let data=await res.json()
         appendData(data)
 
@@ -234,7 +234,7 @@ rating_btn.oninput=()=>{
 
 const Sort_by_rating=async(order)=>{
      try{
-        let res=await fetch(`http://localhost:8080/fonts?_sort=rating&_order=${order}`)
+        let res=await fetch(`https://fiver-ox6s.onrender.com/fonts?_sort=rating&_order=${order}`)
         let data=await res.json()
         appendData(data)
 
