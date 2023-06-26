@@ -28,7 +28,7 @@ const addDetails = async (event) => {
     password,
   };
 
-  let response = await fetch(`http://localhost:8080/user`, {
+  let response = await fetch(`https://fiver-ox6s.onrender.com/user`, {
     method: "POST",
     body: JSON.stringify(send_this_data),
     headers: {
@@ -73,7 +73,7 @@ const getData = async (event) => {
 
   let password = login_form.login_password.value;
 
-  let res = await fetch(" http://localhost:8080/user");
+  let res = await fetch(" https://fiver-ox6s.onrender.com/user");
 
   let UrName = "";
   let details = await res.json();
